@@ -1,12 +1,6 @@
-# Portfolio de Ranim Bettaieb
+# Portfolio — Version bannière IA
 
-Site statique prêt pour GitHub Pages. Les illustrations des projets sont des visuels conceptuels et non des captures d'écran réelles des applications.
+La nouvelle bannière `hero-ai.webp` est intégrée au haut du site.
 
-## Publication
-
-1. Créer un dépôt public GitHub **ranim147.github.io**.
-2. À la racine du dépôt, ajouter **index.html**, **assets/**, **.nojekyll** et éventuellement **README.md**.
-3. Dans **Settings → Pages**, sélectionner **Deploy from a branch**, branche **main**, dossier **/(root)**.
-4. Ouvrir https://ranim147.github.io/ une fois la publication effective.
-
-Aucune installation de Python ou Node.js n'est nécessaire.
+### Déploiement sur GitHub
+Publier le fichier `index.html` mis à jour et `hero-ai.webp` **à la racine** du dépôt `ranim147.github.io`. Les autres images restent à leur place actuelle.
