@@ -172,17 +172,18 @@
     @media (max-width: 1024px){.hero-card{margin-top:210px;max-width:340px}}
     @media (max-width: 760px){.hero-card{margin-top:22px;max-width:none;margin-left:0}.hero-grid{grid-template-columns:1fr}}
 
-/* Clean hero: portrait unobstructed, content constrained to left */
-.hero-grid { display:block !important; padding:88px 0 88px !important; }
-.hero-grid > div:first-child { max-width:610px; position:relative; z-index:2; }
-.hero { min-height:650px; background-position:center,center center !important; }
-.hero::before,.hero::after { display:none !important; }
-.hero h1 { font-size:clamp(39px,5.7vw,69px); }
-.hero p { max-width:560px; }
-@media(max-width:800px){
- .hero { background-position:center,62% center !important; }
- .hero-grid > div:first-child { max-width:100%; background:rgba(7,14,30,.66); padding:24px; border-radius:24px; backdrop-filter:blur(5px); }
- .hero-grid { padding:50px 0 70px !important; }
+/* Final hero cleanup: no overlay on portrait */
+.hero-grid{display:block !important; padding:88px 0 88px !important;}
+.hero-grid > div:first-child{max-width:620px; position:relative; z-index:2;}
+.hero-card{display:none !important;}
+.hero-topshot,.profile-card,.profile-info,.avatar-shell{display:none !important;}
+.hero{min-height:680px; background-position:center, center center !important;}
+.hero h1{font-size:clamp(42px,6vw,72px); max-width:560px;}
+.hero h2,.hero p,.hero-cta,.eyebrow{max-width:620px;}
+@media (max-width:760px){
+  .hero-grid{padding:58px 0 72px !important;}
+  .hero-grid > div:first-child{max-width:100%; background:rgba(7,14,30,.58); padding:22px; border-radius:22px; backdrop-filter: blur(4px);}
+  .hero{min-height:auto; background-position:center, 64% center !important;}
 }
 </style>
 </head>
@@ -239,7 +240,7 @@
       <div class="about-grid">
         <div class="glass">
           <h4 style="margin:0 0 12px;font-size:24px">What I bring</h4>
-          <p style="margin:0;color:var(--muted)">A practical, versatile profile for startups and AI teams: solid ML foundations, hands-on backend experience, and the ability to ship demonstrable prototypes.</p>
+          <p style="margin:0;color:var(--muted)">A practical, versatile profile for startups and AI teams: solid ML foundations, hands-on backend experience, and the ability to ship demonstrable prototypes. I combine data work, model experimentation and implementation into usable AI products.</p>
           <div class="focus-list">
             <div class="focus-item"><strong>Applied ML</strong><p>Classification, model evaluation, experimentation and statistical validation.</p></div>
             <div class="focus-item"><strong>Generative AI</strong><p>RAG pipelines, multi-agent systems, prompt design and LLM-powered workflows.</p></div>
