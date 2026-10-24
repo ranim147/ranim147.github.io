@@ -171,6 +171,19 @@
     .metric span{display:block;margin-top:4px;color:#dcecff;font-size:12px;line-height:1.35}
     @media (max-width: 1024px){.hero-card{margin-top:210px;max-width:340px}}
     @media (max-width: 760px){.hero-card{margin-top:22px;max-width:none;margin-left:0}.hero-grid{grid-template-columns:1fr}}
+
+/* Clean hero: portrait unobstructed, content constrained to left */
+.hero-grid { display:block !important; padding:88px 0 88px !important; }
+.hero-grid > div:first-child { max-width:610px; position:relative; z-index:2; }
+.hero { min-height:650px; background-position:center,center center !important; }
+.hero::before,.hero::after { display:none !important; }
+.hero h1 { font-size:clamp(39px,5.7vw,69px); }
+.hero p { max-width:560px; }
+@media(max-width:800px){
+ .hero { background-position:center,62% center !important; }
+ .hero-grid > div:first-child { max-width:100%; background:rgba(7,14,30,.66); padding:24px; border-radius:24px; backdrop-filter:blur(5px); }
+ .hero-grid { padding:50px 0 70px !important; }
+}
 </style>
 </head>
 <body>
@@ -209,21 +222,7 @@
         </div>
       </div>
 
-      <aside class="hero-card">
-        <div class="profile-card">
-          <h3>Ranim<br/>Bettaieb</h3>
-          <div class="profile-role">Data Scientist &amp; AI Engineer</div>
-          <div class="profile-meta">ESPRIT · IMT Nord Europe<br/>Lille / France<br/>Available for a 6-month internship in 2027</div>
-        </div>
-        <div class="mini-tags">
-          <span>Python</span><span>FastAPI</span><span>PyTorch</span><span>LangChain</span><span>RAG</span><span>Scikit-learn</span>
-        </div>
-        <div class="hero-metrics">
-          <div class="metric"><strong data-count="40">0</strong><span>FastAPI endpoints</span></div>
-          <div class="metric"><strong data-count="87">0</strong><span>CLIP accuracy</span></div>
-          <div class="metric"><strong data-count="6">0</strong><span>Featured projects</span></div>
-        </div>
-      </aside>
+      
     </div>
   </section>
 
